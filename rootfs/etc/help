@@ -1,0 +1,21 @@
+--------------------------HELP------------------------------------------
+1.  cd                : change the current working directory
+2.  clear             : to clear the screen
+3.  echo $PATH/$PS1   : to display the path/ps1 variable
+4.  export PATH=/PS1  : update the path variable/ps1 variable
+5.  ls                : list the contents in current directory
+6.  ps                : list all runnning process
+7.  sleep             : sleep for input time in seconds
+8. kill -9            : kills the process whose pid is provided as input
+9. help               : prints the features supported in shell
+10. pwd               : prints current working directory
+11. exit              : exits the given process
+12. cat               : prints the content of file
+13. sh                : runs the script having shebang(!#)
+14. ulimit            : prints the upper limits
+15. ./<bin>           : binary execution of binary with name <bin>
+16. /rootfs/bin/<bin> : executes binary located at /rootfs/bin/<>
+17. shutdown          : shutdown the OS
+18. pipe (" | ")      : single level pipe support
+19. Background(" & ") : supports execution of background process and scripts
+20. alarm	      : runs alarm after given time

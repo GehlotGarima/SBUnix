@@ -1,0 +1,7 @@
+Max Process 	         100
+Stack Limit              8192
+Virtual Memory           unlimited
+Max path size            64 
+Max filename length      30
+Max processname length   15
+Max number of open files 100

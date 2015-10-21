@@ -1,0 +1,106 @@
+
+-----------------------------------------70 Points Project -----------------------------------
+
+Team Members:
+=============
+Garima Gehlot (SBU ID: 110167347)
+Arpit Singh (SBU ID: 110162005)
+Sagar Mehra (SBU ID: 110166108)
+
+------------------------------------------ Features -------------------------------------------
+
+1. Warm up:: Kernel printf, Timer, Keyboard, IDT, handlers
+2. Physical Memory, Virtual Memory, Mapping
+3. 4-Level Paging, CR3 setup
+4. Ring 0 to Ring 3 switch, Context Switch, COW fork
+5. Tarfs and Elf Loading
+6. Auto grow stack and Dynamic heap allocation
+7. SEGV handling
+8. Shell with "PATH","PS1","cd","|" and "&"
+9. Script handling with #!. 
+
+----------------------------------------- Memory Mapping ------------------------------------
+
+			PHYSICAL	VIRTUAL
+			========	========
+
+physbase		0x200000	0xffffffff80200000
+
+VMAP_START		0x0		0xfffffffff0000000
+VMAP_END		0x7ffe000	0xfffffffff7ffe000
+
+VIDEO_BUFFER	        0xb8000		0xFFFFFFFF800B8000	
+
+USER_STACK_TOP				0xf000000
+STACK_LIMIT				8192
+
+HEAP					0x0800000
+HEAPEND					0x1000000
+
+Features Supported on Shell:
+============================
+1.  cd                : change the current working directory
+2.  clear/cls         : to clear the screen
+3.  echo $PATH        : to display the path
+4.  echo $PS1         : to display the PS1
+5.  echo <var>        : prints the input given
+6.  export PATH=      : update the path variable
+7.  export PS1=       : update the PS1 variable
+8.  ls                : list the contents in current directory
+9.  ps                : list all runnning process
+10. sleep             : sleep for input time in seconds
+11. kill -9           : kills the process whose pid is provided as input
+12. help              : prints the features supported in shell
+13. pwd               : prints current working directory
+14. exit              : exits the given process
+15. cat               : prints the content of file
+16. sh                : runs the script provided as input having shebang(!#)
+17. ulimit            : prints the upper limits
+18. ./<bin>           : binary execution of binary with name <bin>
+19. /rootfs/bin/<bin> : executes binary located at /rootfs/bin/<>
+20. shutdown          : shutdown the OS
+21. pipe (" | ")      : single level pipe support
+22. Background(" & ") : Supports execution of background process and scripts
+23. alarm             : Runs alarm after provided time 
+
+Syscall supported:
+=================
+1. open
+2. read
+3. write
+4. lseek
+5. close
+6. dup
+7. dup2
+8. opendir
+9. readdir
+10.closedir
+11.sleep
+12.getcwd
+13.waitpid
+14.execve
+15.getpid
+16.getppid
+17.fork
+18.brk
+19.exit
+20.chdir
+21.listprocess
+23.clearscreen
+24.shutdown
+25.alarm
+
+--------------------------------- References ---------------------------------
+
+1. BrokenThorn
+2. Osdevwiki and Forum
+3. AMD64 Architecture Programmer's Manual Volume 2: System Programming
+4. Bran(OSDEVER)
+5. JamesM's kernel development tutorials 
+
+Reference OS (x64):
+1. HelenOS-0.5.0
+2. Shovelos
+
+
+
